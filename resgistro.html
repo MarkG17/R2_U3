@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Registro de Usuario</title>
+    
+    <style>
+        /* Selectores de elemento  y Backgrounds  */
+        body {
+            background-color: #f0f2f5; /* Color de fondo general  */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Tipografía  */
+            color: #333333; /* Color de texto  */
+            display: flex;
+            justify-content: center;
+            padding: 40px;
+        }
+
+        /* Selector de clase  */
+        .contenedor-formulario {
+            background-color: #ffffff; /* Fondo de la sección del formulario  */
+            padding: 30px 40px;
+            border-radius: 10px;
+            border: 1px solid #dcdde1; /* Bordes del contenedor  */
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            width: 100%;
+            max-width: 500px;
+        }
+
+        /* Selector de ID  */
+        #titulo-principal {
+            text-align: center;
+            color: #2c3e50; /* Color de texto  */
+            font-size: 26px; /* Tamaño de fuente  */
+            margin-bottom: 25px;
+        }
+
+        /* Estilos generales para las etiquetas */
+        label {
+            display: block;
+            margin-top: 15px;
+            margin-bottom: 5px;
+            font-weight: 600;
+            font-size: 14px; /* Tamaño de fuente  */
+        }
+
+        /* Bordes para campos y área de texto  */
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 2px solid #bdc3c7; /* Bordes  */
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-family: inherit;
+        }
+
+        /* Opciones de checkboxes */
+        .grupo-checkbox {
+            margin-top: 15px;
+            background-color: #f8f9fa; /* Color de fondo para una sección  */
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #e9ecef; /* Bordes  */
+        }
+
+        .grupo-checkbox label {
+            display: inline;
+            font-weight: normal;
+            margin-right: 15px;
+            margin-top: 0;
+        }
+
+        /* Bordes y fondo para botones [cite: 69, 70] */
+        .btn-registro {
+            width: 100%;
+            background-color: #3498db; /* Fondo del botón  */
+            color: #ffffff; /* Color de texto  */
+            padding: 12px;
+            margin-top: 25px;
+            border: 2px solid #2980b9; /* Borde del botón  */
+            border-radius: 5px;
+            font-size: 16px; /* Tamaño de fuente  */
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .btn-registro:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="contenedor-formulario">
+        <h1 id="titulo-principal">Registro de la persona Usuaria</h1>
+
+        <form action="#" method="POST">
+            
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre" required>
+
+            <label for="apellido">Apellido:</label>
+            <input type="text" id="apellido" name="apellido" placeholder="Ingresa tu apellido" required>
+
+            <label for="correo">Correo Electrónico:</label>
+            <input type="email" id="correo" name="correo" placeholder="ejemplo@correo.com" required>
+
+            <label for="password">Contraseña:</label>
+            <input type="password" id="password" name="password" placeholder="Crea una contraseña segura" required>
+
+            <label for="descripcion">Breve descripción sobre ti:</label>
+            <textarea id="descripcion" name="descripcion" rows="4" placeholder="Cuéntanos un poco sobre tu experiencia..."></textarea>
+
+            <div class="grupo-checkbox">
+                <p style="margin-top:0; font-weight:600; font-size: 14px;">Tus Intereses:</p>
+                <input type="checkbox" id="int-tecnologia" name="intereses" value="Tecnología">
+                <label for="int-tecnologia">Tecnología</label>
+
+                <input type="checkbox" id="int-arte" name="intereses" value="Arte">
+                <label for="int-arte">Arte</label>
+
+                <input type="checkbox" id="int-deporte" name="intereses" value="Deporte">
+                <label for="int-deporte">Deporte</label>
+            </div>
+
+            <button type="submit" class="btn-registro">Registrarse</button>
+
+        </form>
+    </div>
+
+</body>
+</html>
